@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>mrBin</title>
+<style>
+body {
+background-color : #5F9EA0;
+}
+div {
+border: 1px solid #333;
+box-shadow: 8px 5px 8px;
+heigth : 30px;
+width  : 50px;
+backgroung-color : #F7F8A0;
+}
+.color1 {
+background-color : #DC143C;
+}
+
+.hh {
+font-weigth : bold;
+font-size : 24 px;
+}
+
+.color2 {
+background-color : #2F4F4F;
+}
+.hidden {
+display : none;
+}
+
+table {
+border-collapse: collapse;
+border : 1 px solid grey;
+}
+
+td {
+padding: 10px 20px;
+border : 1px solid grey;
+background-color : #F0F8FF;
+}
+
+.div1 {
+heigth : 30px;
+width  : 50px;
+background-color : #F0F8FF;
+position : absolute;
+}
+.div2 {
+heigth : 20px;
+width  : 40px;
+background-color : #33FF74;
+position : absolute;
+}
+.div3 {
+heigth : 10px;
+width  : 30px;
+background-color : #5757B4;
+position : absolute;
+}
+.div4 {
+heigth : 40px;
+width  : 60px;
+background-color : #E9F089;
+position : absolute;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<select name = 'country' id = 'country' size = '4'>
+<option value = 'Argentina'>Argentina</option>
+<option value = 'Brasil'>Brasil</option>
+<option value = 'Colombia'>Colombia</option>
+<option value = 'Chile'>Chile</option>
+</select>
+
+
+<select name = 'city' id = 'city' size = '4'>
+<option value = 'Argentina'>Buenos Aires,Cordoba,Rosario</option>
+<option value = 'Brasil'>Sao Paulo,Rio de Janeiro,Belo Horizonte</option>
+<option value = 'Colombia'>Bogota,Medellin,Bucaramanga</option>
+<option value = 'Chile'>Santiago,Antofagasta,Greater Concepcion</option>
+</select>
+
+<script>
+let country = document.querySelector('#country');
+
+
+let city = document.querySelector('#city');
+
+
+country.addEventListener('click',(e)=> {
+    
+let sel = e.target;
+    
+let val = sel.value;
+
+for(let i = 0; i < city.length;i++) {
+    
+if (city[i].textContent = val)city[i].selected = true; 
+}
+});
+</script>
+
+
+</body>
+</html>
